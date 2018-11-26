@@ -1,0 +1,53 @@
+{% extends "bootstrap/base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% include 'base_body.html' %}
+
+{% block content %}
+    <h1 class="text-center">Save any URL you want!</h1>
+    <div id="get_url">
+        <form class="border form-signin text-center" action="{{url_for('save_url')}}" method="POST">
+            <br>
+            <input type="text" name="url" id="save_url">
+            <br>
+            <button class="btn btn-md btn-success" type="submit">Save it</button>
+        </form>
+    </div>
+
+    {% for post in posts %}
+        {% if post.user_post == current_user.id %}
+        <div id="post_feed" class="border rounded d-flex p-1">
+            
+            <div id="url_posted" class="m-1">      
+                <a href="{{post.url_dir}}" class="w-100 h-100" target="_blank">
+                    <img src="{{post.url_img}}" class="img-fluid w-100 h-100"> 
+                </a>
+            </div>
+            <div id="url_posted_title" class="m-1" >
+                {% if post.title|length > 70 %}
+                <div>
+                    <a href="{{post.url_dir}}" target="_blank">
+                        <p class="font-weight-bold text-dark" style="word-wrap: break-word; font-size: 16px;">{{post.title[:70]}}...</p>
+                    </a>
+                </div>
+                {% else %}
+                <div>
+                    <a href="{{post.url_dir}}" target="_blank">
+                        <p class="font-weight-bold text-dark m-0" style="font-size: 20px;">{{post.title}}</p>
+                    </a>
+                </div>
+                {% endif %}
+
+                {% if not post.url_base == post.url_dir %}
+                <div>
+                    <small id="url_posted_main" class="text-secondary">Main Page: <a class="text-dark" href="http://{{post.url_base}}" target="_blank">{{post.url_base}}</a></small>
+                </div>    
+                {% endif %}
+                <div id="url_posted_date" class="text-secondary">
+                    <small>Published on {{post.created.strftime('%d-%m-%y / %X %p')}}</small>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "bootstrap/base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% include 'base_body.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Welcome {{email}}!</h1>
+<br>
+<p class="text-center">Check your email inbox (and your spam folder) <br> you should have received an email with a confirmation link.</p>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "bootstrap/base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% include 'base_body.html' %}
+
+{% block content %}
+    <h1 class="text-center">Hello, {{ email }}!</h1>
+
+        <div id="user_featurings">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('save_url') }}">Save URLs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('email_accounts') }}">Email Accounts</a>
+            </li>
+          </ul>
+        </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "bootstrap/base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% include 'base_body.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Email Accounts</h1>
+<p class="text-center">Here you can find your main email and other emails associated with your account</p>
+<hr>
+<div id="main_email_container" class="m-auto text-center">
+    <h4 id="main_email" class="border m-auto"><span class="font-weight-bold"> Main Email: </span>{{ new_main_email.email }}</h4>
+    {% if other_emails %}
+        <br>
+        <a href="{{url_for('change_emails')}}" ><button class="btn btn-md btn-success"> Change main email</button></a>
+    {% endif %}
+</div>
+<hr>
+<form class="form-signin" action="/email_accounts" method="post">
+    {{ form.hidden_tag() }}
+
+    <div>
+        <style> .control-label {visibility: hidden;}</style>
+        {{ wtf.form_field(form.email) }}
+    </div>
+    <input type="submit" id="add_email" class="btn" value="Add Email" /> 
+</form>
+<hr>
+
+{% if other_emails %}
+    <table id="emails_list">
+        <tr>
+            <th>Other email</th>
+            <th>Confirmed</th>
+        </tr>
+    {% for email in other_emails %}
+        <tr>
+            {% if not new_main_email.email == email.email %}
+                <td>{{email.email}}</td>
+                <td>{{email.confirmed}}</td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </table>
+{% endif %}
+{% endblock %}

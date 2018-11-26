@@ -1,0 +1,25 @@
+{% extends "bootstrap/base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% include 'base_body.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Change your main email</h1>
+
+<form class="text-center" action="{{ url_for('change_emails') }}" method="post">
+    <select id="select_emails" name="emails">
+    {% for email in other_emails %}
+        {% if not user_email == email.email %}
+        <option value="{{email.id}}">{{email.email}}</option>
+        {% endif %}
+    {% endfor %}
+    </select>
+    <input class="m-auto btn btn-sm btn-primary" type="submit" value="Change Now!">
+</form>
+<hr>
+<div class="text-center">
+    <a href="{{url_for('email_accounts')}}" value="Get back">Get back</a>
+</div>
+
+{% endblock %}

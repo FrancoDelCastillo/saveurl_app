@@ -1,0 +1,121 @@
+html {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  min-height: 100%;
+  padding-bottom: 40px;
+  background-color: #eee;
+  }
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+div#main_email_container {
+  width:480px;
+}
+
+h4#main_email {
+  padding: 10px 80px;
+  border-radius: 8px;
+}
+
+div#user_featurings {
+  width:400px; 
+  margin: auto;
+}
+
+select#select_emails {
+  margin: 20px;
+}
+
+div#get_url {
+  margin: 0 auto;
+  padding: 15px 5px;
+}
+
+input#save_url {
+  width: 340px;
+  margin-bottom: 10px;
+}
+
+div#post_feed {
+  width: 440px; 
+  height: 140px;
+  margin: 10px auto;
+}
+
+div#url_posted {
+  width:200px; 
+  height: 120px;
+}
+
+div#url_posted_title {
+  width:300px; 
+  position: relative;
+}
+
+small#url_posted_main {
+  position:absolute; 
+  bottom: 20px;
+}
+
+div#url_posted_date {
+  position:absolute; 
+  bottom: 0;
+}
+
+span#email_error {
+  color: #F00;
+}
+
+#emails_list {
+  width: 300px; 
+  margin-top:30px;
+}
+
+input#add_email {  
+  margin: 0 auto;
+  display: block;
+}
+
+table#emails_list {
+  margin: 0 auto;
+}
+
+  .form-signin {
+    max-width: 530px;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }

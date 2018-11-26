@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+<!-- Import WTForms -->
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% include "base_body.html" %}
+
+{% block content %}
+    <h1 class="text-center h2">Please, sign in</h1>
+    <form class="form-signin" action="/signin" method="post" name="signin">
+        {{ form.hidden_tag() }} <!-- a CSRF token hidden field is rendered in template -->
+        {{ wtf.form_field(form.email) }} <!-- bootstrap/wtf.html form macro -->
+        <br>
+        {{ wtf.form_field(form.password) }} <!-- bootstrap/wtf.html form macro -->
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+    <footer>
+        <p id="copy_right">&copy; 2018</p>
+    </footer>
+{% endblock %}
