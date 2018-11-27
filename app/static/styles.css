@@ -59,22 +59,19 @@ div#post_feed {
 }
 
 div#url_posted {
-  width:100px; 
+  width: 100px; 
   height: 120px;
 }
 
 div#url_posted_title {
-  width:240px; 
-  position: relative;
+  width: 240px; 
 }
 
 small#url_posted_main {
-  position:absolute; 
   bottom: 20px;
 }
 
 div#url_posted_date {
-  position:absolute; 
   bottom: 0;
 }
 
