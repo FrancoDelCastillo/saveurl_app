@@ -266,7 +266,7 @@ def save_url(): #Web scraping and feed
 
             if base_url == 'www.youtube.com':
                 video_url = parse_url.query #Extract the video ID
-                scrape_img = 'https://i.ytimg.com/vi/'+video_url[2:]+'/maxresdefault.jpg' #Searching thumbnail
+                scrape_img = 'https://i.ytimg.com/vi/'+video_url[2:]+'/hqdefault.jpg' #Searching thumbnail
                 vid = pafy.new(saved_url) #Using pafy to retrieve YouTube's video data
                 title_vid = vid.title
                 scrape_title = title_vid
