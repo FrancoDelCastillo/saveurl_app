@@ -59,12 +59,12 @@ div#post_feed {
 }
 
 div#url_posted {
-  width:200px; 
+  width:100px; 
   height: 120px;
 }
 
 div#url_posted_title {
-  width:200px; 
+  width:240px; 
   position: relative;
 }
 
