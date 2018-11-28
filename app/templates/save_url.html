@@ -18,22 +18,22 @@
         {% if post.user_post == current_user.id %}
         <div id="post_feed" class="border rounded d-flex p-1">
             
-            <div id="url_image" class="m-1">      
+            <div id="url_image">      
                 <a href="{{post.url_dir}}" class="w-100 h-100" target="_blank">
-                    <img src="{{post.url_img}}" class="w-100 h-100"> 
+                    <img id="_thumbnail" src="{{post.url_img}}"> 
                 </a>
             </div>
             <div id="url_posted_data" class="m-1" >
                 {% if post.title|length > 70 %}
                 <div>
                     <a href="{{post.url_dir}}" target="_blank">
-                        <p class="font-weight-bold text-dark m-0" style="font-size: 14px;">{{post.title[:70]}}...</p>
+                        <p class="font-weight-bold text-dark m-0" style="font-size: 12px;">{{post.title[:70]}}...</p>
                     </a>
                 </div>
                 {% else %}
                 <div>
                     <a href="{{post.url_dir}}" target="_blank">
-                        <p class="font-weight-bold text-dark m-0" style="font-size: 16px;">{{post.title}}</p>
+                        <p class="font-weight-bold text-dark m-0" style="font-size: 14px;">{{post.title}}</p>
                     </a>
                 </div>
                 {% endif %}

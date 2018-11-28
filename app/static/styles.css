@@ -17,7 +17,7 @@ footer {
 }
 
 div, h4, span {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 a {
@@ -54,13 +54,18 @@ input#save_url {
 
 div#post_feed {
   width: 340px; 
-  height: 130px;
+  height: 100px;
   margin: 10px auto;
 }
 
 div#url_image {
   width: 100px; 
-  height: 120px;
+  height: 90px;
+}
+
+img#_thumbnail {
+  height: 100%;
+  width: 100%;
 }
 
 div#url_posted_data {
