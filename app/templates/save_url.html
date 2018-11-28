@@ -24,16 +24,16 @@
                 </a>
             </div>
             <div id="url_posted_data" class="m-1" >
-                {% if post.title|length > 70 %}
+                {% if post.title|length > 60 %}
                 <div>
                     <a href="{{post.url_dir}}" target="_blank">
-                        <p class="font-weight-bold text-dark m-0" style="font-size: 12px;">{{post.title[:70]}}...</p>
+                        <p class="font-weight-bold text-dark m-0" style="font-size: 12px;">{{post.title[:60]}}...</p>
                     </a>
                 </div>
                 {% else %}
                 <div>
                     <a href="{{post.url_dir}}" target="_blank">
-                        <p class="font-weight-bold text-dark m-0" style="font-size: 14px;">{{post.title}}</p>
+                        <p class="font-weight-bold text-dark m-0" style="font-size: 12px;">{{post.title}}</p>
                     </a>
                 </div>
                 {% endif %}
