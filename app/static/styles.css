@@ -58,17 +58,19 @@ div#post_feed {
   margin: 10px auto;
 }
 
-div#url_posted {
+div#url_image {
   width: 100px; 
   height: 120px;
 }
 
-div#url_posted_title {
-  width: 240px; 
+div#url_posted_data {
+  width: 240px;
+  position: relative; 
 }
 
 div#url_posted_date {
   bottom: 0;
+  position: absolute;
 }
 
 span#email_error {
