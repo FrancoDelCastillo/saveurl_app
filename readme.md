@@ -7,4 +7,4 @@ SaveURL allows you to sign in using just an email address, associate your user a
 - Web scraping with **Requests-HTML** and **Pafy**
 - Connecting to a database with **SQLAlchemy** and **Heroku postgres**
 
-Deployed to **Heroku**, enter [here]. (https://saveurlapp.herokuapp.com/)
+Deployed to **Heroku**, enter [here](https://saveurlapp.herokuapp.com/).
