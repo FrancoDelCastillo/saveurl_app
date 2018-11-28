@@ -16,6 +16,11 @@ footer {
   text-align: center;
 }
 
+small#go_signup {
+  text-align: center;
+  display: block;
+}
+
 div, h4, span {
   font-size: 12px;
 }

@@ -5,7 +5,7 @@
 {% include 'base_body.html' %}
 
 {% block content %}
-    <h1 class="text-center mt-40 h2">Please, create your account</h1>
+    <h1 class="text-center mt-40 h2">Create your account</h1>
     <form class="form-signin" action="/signup" method="post" name="signup">
         {{ form.hidden_tag() }} <!-- a CSRF token hidden field is rendered in template -->
         {{ wtf.form_field(form.email) }} <!-- bootstrap/wtf.html form macro -->
